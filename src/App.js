@@ -6,6 +6,19 @@ import { useState } from 'react';
 
 function App() {
   let [score, setScore] = useState(0)
+  let [displayMole, setDisplayMole] = useState(false)
+
+  const booped = () => {
+    for (let i = 0; i < 9; i++){
+    score += 1
+    setDisplayMole = false
+    displayMole(
+      
+    )
+    }
+  }
+
+
   const createMoleHills = () => {
     hills = []
     for( let i = 0; i< 9; i++){
@@ -23,7 +36,7 @@ function App() {
     <div className="App">
       <h1>React a Mole!</h1>
       {score}
-      {createMoleHills}
+      {createMoleHills()}
     </div>
   );
 }
