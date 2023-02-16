@@ -1,26 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import MoleContainer from './MoleContainer';
-import EmptySlot from './EmptySlot';
 import { useState } from 'react';
+import MoleImg from './moleImg';
 
 function App() {
   let [score, setScore] = useState(0)
-  let [displayMole, setDisplayMole] = useState(false)
-
-  const booped = () => {
-    for (let i = 0; i < 9; i++){
-    score += 1
-    setDisplayMole = false
-    displayMole(
-      
-    )
-    }
-  }
-
 
   const createMoleHills = () => {
-    hills = []
+    let hills = []
     for( let i = 0; i< 9; i++){
       hills.push(
         <MoleContainer key={i} setScore={setScore} score={score} />
