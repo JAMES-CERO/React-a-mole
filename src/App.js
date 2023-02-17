@@ -1,7 +1,6 @@
 import './App.css';
 import MoleContainer from './MoleContainer';
 import { useState } from 'react';
-import MoleImg from './moleImg';
 
 function App() {
   let [score, setScore] = useState(0)
@@ -14,7 +13,7 @@ function App() {
       )
     }
     return (
-      <div>
+      <div className='App-header'>
         {hills}
       </div>
     )
@@ -22,6 +21,8 @@ function App() {
   return (
     <div className="App">
       <h1>React a Mole!</h1>
+      <button>Start</button>
+      <hr/>
       {score}
       {createMoleHills()}
     </div>
